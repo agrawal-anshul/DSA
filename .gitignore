@@ -1,0 +1,109 @@
+# Compiled object files
+*.o
+*.obj
+*.lo
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Shared objects (shared libraries)
+*.so
+*.dylib
+*.dll
+
+# Static libraries
+*.a
+*.lib
+
+# Other generated files
+*.ilk
+*.map
+*.exp
+*.suo
+*.user
+*.sdf
+*.pdb
+*.opendb
+*.tlog
+*.log
+
+# Dependency files
+*.d
+
+# IDEs and editors
+# CodeLite
+*.tags
+*.project
+*.workspace
+*.session
+*.cbp
+*.layout
+*.depend
+*.mak
+# CLion
+.idea/
+cmake-build-debug/
+# Eclipse
+.cproject
+.project
+# Qt Creator
+*.creator.*
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# OS-specific files
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Test output
+*.gcda
+*.gcno
+*.gcov
+
+# Generated documentation
+docs/
+
+# Backup files
+*~
+*.swp
+*.bak
+*.backup
+*.tmp
+*.temp
+*.log
+*.orig
+*.rej
