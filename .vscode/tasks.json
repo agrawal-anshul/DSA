@@ -37,7 +37,7 @@
          "command": "mkdir -p bin/${relativeFileDirname} && g++ -std=c++17 -o bin/${relativeFileDirname}/${fileBasenameNoExtension} ${file} && ./bin/${relativeFileDirname}/${fileBasenameNoExtension} < input.txt > output.txt  && code output.txt",
          "group": {
             "kind": "build",
-            "isDefault": true
+            "isDefault": false
          },
          "problemMatcher": ["$gcc"]
       }
