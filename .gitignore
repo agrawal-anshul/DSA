@@ -107,3 +107,7 @@ docs/
 *.log
 *.orig
 *.rej
+
+
+# CPP executables 
+bin/
