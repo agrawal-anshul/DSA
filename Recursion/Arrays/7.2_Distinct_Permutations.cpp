@@ -48,3 +48,47 @@ int main()
 
    return 0;
 }
+
+/* Function Call Tree:
+
+permute({1, 2, 2}, idx=0)
+ ├── isDuplicate({1, 2, 2}, start=0, end=0) → false
+ ├── swap(nums[0], nums[0]) → {1, 2, 2}
+ │   ├── permute({1, 2, 2}, idx=1)
+ │   │   ├── isDuplicate({1, 2, 2}, start=1, end=1) → false
+ │   │   ├── swap(nums[1], nums[1]) → {1, 2, 2}
+ │   │   │   ├── permute({1, 2, 2}, idx=2)
+ │   │   │   │   ├── isDuplicate({1, 2, 2}, start=2, end=2) → false
+ │   │   │   │   ├── swap(nums[2], nums[2]) → {1, 2, 2}
+ │   │   │   │   │   ├── permute({1, 2, 2}, idx=3) → **Store {1, 2, 2}**
+ │   │   │   │   ├── Backtrack → swap(nums[2], nums[2]) → {1, 2, 2}
+ │   │   │   ├── Backtrack → swap(nums[1], nums[1]) → {1, 2, 2}
+ │   │   ├── isDuplicate({1, 2, 2}, start=1, end=2) → **true, SKIP**
+ │   │   ├── Backtrack to idx=1
+ │   ├── Backtrack → swap(nums[0], nums[0]) → {1, 2, 2}
+ │
+ ├── isDuplicate({1, 2, 2}, start=0, end=1) → false
+ ├── swap(nums[0], nums[1]) → {2, 1, 2}
+ │   ├── permute({2, 1, 2}, idx=1)
+ │   │   ├── isDuplicate({2, 1, 2}, start=1, end=1) → false
+ │   │   ├── swap(nums[1], nums[1]) → {2, 1, 2}
+ │   │   │   ├── permute({2, 1, 2}, idx=2)
+ │   │   │   │   ├── isDuplicate({2, 1, 2}, start=2, end=2) → false
+ │   │   │   │   ├── swap(nums[2], nums[2]) → {2, 1, 2}
+ │   │   │   │   │   ├── permute({2, 1, 2}, idx=3) → **Store {2, 1, 2}**
+ │   │   │   │   ├── Backtrack → swap(nums[2], nums[2]) → {2, 1, 2}
+ │   │   │   ├── Backtrack → swap(nums[1], nums[1]) → {2, 1, 2}
+ │   │   ├── isDuplicate({2, 1, 2}, start=1, end=2) → false
+ │   │   ├── swap(nums[1], nums[2]) → {2, 2, 1}
+ │   │   │   ├── permute({2, 2, 1}, idx=2)
+ │   │   │   │   ├── isDuplicate({2, 2, 1}, start=2, end=2) → false
+ │   │   │   │   ├── swap(nums[2], nums[2]) → {2, 2, 1}
+ │   │   │   │   │   ├── permute({2, 2, 1}, idx=3) → **Store {2, 2, 1}**
+ │   │   │   │   ├── Backtrack → swap(nums[2], nums[2]) → {2, 2, 1}
+ │   │   │   ├── Backtrack → swap(nums[1], nums[2]) → {2, 1, 2}
+ │   │   ├── Backtrack → swap(nums[0], nums[1]) → {1, 2, 2}
+ │
+ ├── isDuplicate({1, 2, 2}, start=0, end=2) → **true, SKIP**
+ ├── Backtrack to idx=0
+
+ */

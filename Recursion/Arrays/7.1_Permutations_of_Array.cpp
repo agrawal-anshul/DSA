@@ -54,3 +54,59 @@ int main()
 
    return 0;
 }
+
+
+
+
+/*
+
+permute({1, 2, 3}, idx=0)
+ ├── swap(nums[0], nums[0]) → {1, 2, 3}
+ │   ├── permute({1, 2, 3}, idx=1)
+ │   │   ├── swap(nums[1], nums[1]) → {1, 2, 3}
+ │   │   │   ├── permute({1, 2, 3}, idx=2)
+ │   │   │   │   ├── swap(nums[2], nums[2]) → {1, 2, 3}
+ │   │   │   │   │   ├── permute({1, 2, 3}, idx=3) → **Store {1, 2, 3}**
+ │   │   │   │   ├── Backtrack → swap(nums[2], nums[2]) → {1, 2, 3}
+ │   │   │   ├── Backtrack → swap(nums[1], nums[1]) → {1, 2, 3}
+ │   │   ├── swap(nums[1], nums[2]) → {1, 3, 2}
+ │   │   │   ├── permute({1, 3, 2}, idx=2)
+ │   │   │   │   ├── swap(nums[2], nums[2]) → {1, 3, 2}
+ │   │   │   │   │   ├── permute({1, 3, 2}, idx=3) → **Store {1, 3, 2}**
+ │   │   │   │   ├── Backtrack → swap(nums[2], nums[2]) → {1, 3, 2}
+ │   │   │   ├── Backtrack → swap(nums[1], nums[2]) → {1, 2, 3}
+ │   ├── Backtrack → swap(nums[0], nums[0]) → {1, 2, 3}
+ │
+ ├── swap(nums[0], nums[1]) → {2, 1, 3}
+ │   ├── permute({2, 1, 3}, idx=1)
+ │   │   ├── swap(nums[1], nums[1]) → {2, 1, 3}
+ │   │   │   ├── permute({2, 1, 3}, idx=2)
+ │   │   │   │   ├── swap(nums[2], nums[2]) → {2, 1, 3}
+ │   │   │   │   │   ├── permute({2, 1, 3}, idx=3) → **Store {2, 1, 3}**
+ │   │   │   │   ├── Backtrack → swap(nums[2], nums[2]) → {2, 1, 3}
+ │   │   │   ├── Backtrack → swap(nums[1], nums[1]) → {2, 1, 3}
+ │   │   ├── swap(nums[1], nums[2]) → {2, 3, 1}
+ │   │   │   ├── permute({2, 3, 1}, idx=2)
+ │   │   │   │   ├── swap(nums[2], nums[2]) → {2, 3, 1}
+ │   │   │   │   │   ├── permute({2, 3, 1}, idx=3) → **Store {2, 3, 1}**
+ │   │   │   │   ├── Backtrack → swap(nums[2], nums[2]) → {2, 3, 1}
+ │   │   │   ├── Backtrack → swap(nums[1], nums[2]) → {2, 1, 3}
+ │   ├── Backtrack → swap(nums[0], nums[1]) → {1, 2, 3}
+ │
+ ├── swap(nums[0], nums[2]) → {3, 2, 1}
+ │   ├── permute({3, 2, 1}, idx=1)
+ │   │   ├── swap(nums[1], nums[1]) → {3, 2, 1}
+ │   │   │   ├── permute({3, 2, 1}, idx=2)
+ │   │   │   │   ├── swap(nums[2], nums[2]) → {3, 2, 1}
+ │   │   │   │   │   ├── permute({3, 2, 1}, idx=3) → **Store {3, 2, 1}**
+ │   │   │   │   ├── Backtrack → swap(nums[2], nums[2]) → {3, 2, 1}
+ │   │   │   ├── Backtrack → swap(nums[1], nums[1]) → {3, 2, 1}
+ │   │   ├── swap(nums[1], nums[2]) → {3, 1, 2}
+ │   │   │   ├── permute({3, 1, 2}, idx=2)
+ │   │   │   │   ├── swap(nums[2], nums[2]) → {3, 1, 2}
+ │   │   │   │   │   ├── permute({3, 1, 2}, idx=3) → **Store {3, 1, 2}**
+ │   │   │   │   ├── Backtrack → swap(nums[2], nums[2]) → {3, 1, 2}
+ │   │   │   ├── Backtrack → swap(nums[1], nums[2]) → {3, 2, 1}
+ │   ├── Backtrack → swap(nums[0], nums[2]) → {1, 2, 3}
+
+*/
