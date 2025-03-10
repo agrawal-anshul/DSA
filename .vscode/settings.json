@@ -2,6 +2,7 @@
    "files.associations": {
       "iostream": "cpp",
       "vector": "cpp",
-      "2_sum_of_n_numbers": "cpp"
+      "2_sum_of_n_numbers": "cpp",
+      "string": "cpp"
    }
 }
