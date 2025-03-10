@@ -5,8 +5,8 @@
 using namespace std;
 
 // ================================================================
-// ==========================WRONG METHOD-3 =======================
-// ==============Generate LExographical But iterative manner===============
+// ========================== METHOD-3 =======================
+// ==============Generate Lexographical But iterative manner===============
 
 
 // A manual recursive implementation of next_permutation.

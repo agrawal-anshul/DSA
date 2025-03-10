@@ -1,1 +1,9 @@
-4 3 2 1 
+Enter number of elements: 
+Enter elements: 
+Result: 
+{ 1 2 2 }
+{ 1 2 }
+{ 1 }
+{ 2 2 }
+{ 2 }
+{ }

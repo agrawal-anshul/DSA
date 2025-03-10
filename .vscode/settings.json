@@ -3,6 +3,7 @@
       "iostream": "cpp",
       "vector": "cpp",
       "2_sum_of_n_numbers": "cpp",
-      "string": "cpp"
+      "string": "cpp",
+      "iosfwd": "cpp"
    }
 }

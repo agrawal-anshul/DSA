@@ -1,0 +1,10 @@
+Important Topics:
+=================
+6.Generate_Subsets.cpp -- [PICK/NOT-PICK Method]
+   6.2 No Duplicates Allowed 
+7. Generate Permutations -- [Select one and Swap one by one with all]
+                                 [ Loop then Recursion + Backtracking]
+   - Disctinct/Unique
+   - Lexographical order [Not done via pure recursion though:(]
+   - Next Permutations
+
