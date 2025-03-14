@@ -1,0 +1,71 @@
+===============================
+  SUBARRAY vs SUBSEQUENCE vs SUBSET
+===============================
+
+1️⃣ SUBARRAY:
+-----------------
+✔ A contiguous part of an array.
+✔ Must maintain the relative order.
+✔ Cannot skip elements in between.
+
+Example:
+Given array: {1, 2, 3}
+Valid subarrays:
+  {}, {1}, {2}, {3}, {1,2}, {2,3}, {1,2,3}
+Invalid subarray:
+  {1,3}  ❌ (not contiguous)
+
+Total number of subarrays:
+  n(n+1)/2
+
+-------------------------------
+2️⃣ SUBSEQUENCE:
+-----------------
+✔ Can delete some elements but order must be maintained.
+✔ Does NOT need to be contiguous.
+
+Example:
+Given array: {1, 2, 3}
+Valid subsequences:
+  {}, {1}, {2}, {3}, {1,2}, {1,3}, {2,3}, {1,2,3}
+Invalid subsequence:
+  {3,1} ❌ (order changed)
+
+Total number of subsequences:
+  2ⁿ
+
+-------------------------------
+3️⃣ SUBSET:
+-----------------
+✔ Any selection of elements, order does NOT matter.
+✔ Can be contiguous or non-contiguous.
+
+Example:
+Given array: {1, 2, 3}
+Valid subsets:
+  {}, {1}, {2}, {3}, {1,2}, {1,3}, {2,3}, {1,2,3}
+Invalid subset:
+  None! ✅ (all possible combinations are valid)
+
+Total number of subsets:
+  2ⁿ
+
+-------------------------------
+🔹 KEY DIFFERENCES:
+-------------------------------
+
+| Feature                 | SUBARRAY          | SUBSEQUENCE      | SUBSET       |
+|-------------------------|-------------------|------------------|--------------|
+| Order matters?          | ✅ Yes            | ✅ Yes            | ❌ No        |
+| Must be contiguous?     | ✅ Yes            | ❌ No             | ❌ No        |
+| Can skip elements?      | ❌ No             | ✅ Yes            | ✅ Yes       |
+| Example {1,2,3}         | {1,2}, {2,3}      | {1,3}, {2,3}     | {1,3}, {2,3} |
+| Total Count             | n(n+1)/2          | 2ⁿ               | 2ⁿ           |
+
+-------------------------------
+🚀 QUICK ANALOGY:
+-------------------------------
+- A **subarray** is like cutting a continuous segment from a movie.
+- A **subsequence** is like selecting specific **scenes** while keeping the order.
+- A **subset** is like choosing **any set of scenes** in **any order**.
+

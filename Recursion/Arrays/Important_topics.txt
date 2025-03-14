@@ -1,6 +1,6 @@
 Important Topics:
 =================
-6.Generate_Subsets.cpp -- [PICK/NOT-PICK Method]
+6.Generate_Subsets.cpp -- [ (Take | Not-Take) Method or  (Pick | Not-Pick) Method]
    6.2 No Duplicates Allowed 
 7. Generate Permutations -- [Select one and Swap one by one with all]
                                  [ Loop then Recursion + Backtracking]
