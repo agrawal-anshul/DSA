@@ -4,6 +4,7 @@
       "vector": "cpp",
       "2_sum_of_n_numbers": "cpp",
       "string": "cpp",
-      "iosfwd": "cpp"
+      "iosfwd": "cpp",
+      "ios": "cpp"
    }
 }

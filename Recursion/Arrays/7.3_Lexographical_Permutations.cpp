@@ -138,8 +138,6 @@ int main()
    for (const auto& it : res) {
       cout << it << endl;
    }
-
-
    return 0;
 }
 
