@@ -1,0 +1,45 @@
+{
+   "version": "2.0.0",
+   "tasks": [
+      {
+         "label": "Compile C++)",
+         "type": "shell",
+         "command": "mkdir -p bin/${relativeFileDirname} && g++ -std=c++17 -o bin/${relativeFileDirname}/${fileBasenameNoExtension} ${file}",
+         "group": {
+            "kind": "build",
+            "isDefault": false
+         },
+         "problemMatcher": ["$gcc"]
+      },
+      {
+         "label": "Run C++ with I/O",
+         "type": "shell",
+         "command": "./bin/${relativeFileDirname}/${fileBasenameNoExtension} < input.txt > output.txt && code output.txt",
+         "group": {
+            "kind": "test",
+            "isDefault": false
+         },
+         "problemMatcher": []
+      },
+      {
+         "label": "Compile & Run C++",
+         "type": "shell",
+         "command": "mkdir -p bin/${relativeFileDirname} && g++ -std=c++17 -o bin/${relativeFileDirname}/${fileBasenameNoExtension} ${file} && ./bin/${relativeFileDirname}/${fileBasenameNoExtension} < input.txt > output.txt",
+         "group": {
+            "kind": "build",
+            "isDefault": true
+         },
+         "problemMatcher": ["$gcc"]
+      },
+      {
+         "label": "Compile & Run C++ with I/O (with redirection to O/P file)",
+         "type": "shell",
+         "command": "mkdir -p bin/${relativeFileDirname} && g++ -std=c++17 -o bin/${relativeFileDirname}/${fileBasenameNoExtension} ${file} && ./bin/${relativeFileDirname}/${fileBasenameNoExtension} < input.txt > output.txt  && code output.txt",
+         "group": {
+            "kind": "build",
+            "isDefault": false
+         },
+         "problemMatcher": ["$gcc"]
+      }
+   ]
+}
