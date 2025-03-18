@@ -1,1 +1,1 @@
-### Move the copy paste the tasks.json into .vscode folder in VS Code for building using CMD+SHIFT+B.
+### Copy-Paste the tasks.json into .vscode folder in VS Code for building using CMD+SHIFT+B.
