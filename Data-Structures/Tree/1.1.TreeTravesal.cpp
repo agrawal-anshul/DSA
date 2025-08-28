@@ -61,13 +61,20 @@ int height(TreeNode* node) {
 }
 
 // Recursive Level-order: Level by level using height
-void levelOrderRec(TreeNode* root, int level) {
+void printLevel(TreeNode* root, int level) {
     if (root == nullptr) return;
     if (level == 1) {
         cout << root->val << " ";
     } else {
-        levelOrderRec(root->left, level - 1);
-        levelOrderRec(root->right, level - 1);
+        printLevel(root->left, level - 1);
+        printLevel(root->right, level - 1);
+    }
+}
+
+void levelOrderRecursive(TreeNode* root) {
+    int h = height(root);
+    for (int i = 1; i <= h; ++i) {
+        printLevel(root, i);
     }
 }
 
@@ -107,7 +114,8 @@ void inOrderIterative(TreeNode* root) {
             if (stk.empty()) break;
 
             // Backtrack and visit the node
-            curr = stk.top(); stk.pop();
+            curr = stk.top(); 
+            stk.pop();
             cout << curr->val << " ";
 
             // Then move right
@@ -296,9 +304,7 @@ int main() {
     levelOrder(root); cout << "\n";
 
     cout << "Level-order (Recursive): ";
-    int h = height(root);
-    for (int i = 1; i <= h; ++i) levelOrderRec(root, i);
-    cout << "\n";
+    levelOrderRecursive(root);cout << "\n";
 
     cout << "In-order (Iterative): ";
     inOrderIterative(root); cout << "\n";

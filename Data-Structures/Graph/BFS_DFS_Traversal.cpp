@@ -212,8 +212,9 @@ private:
 
 public:
     // Constructor initializes graph with specified number of vertices
-    explicit GraphTraversal(int vertices) : vertexCount(vertices) {
-        adjacencyList.resize(vertexCount);
+    GraphTraversal(int vertices) {
+        vertexCount = vertices;
+        adjacencyList.resize(vertices); // Create an empty list for each vertex
     }
     
     // Add undirected edge between two vertices with validation

@@ -24,7 +24,7 @@ void generateSubsets(vector<int>& arr, vector<int>& subset, int index, vector<ve
 	subset.push_back(arr[index]);
 	generateSubsets(arr, subset, index+1, result);
 
-   // Skip duplicate element after the first the occurrence
+   // !IMPORTANT: Skip duplicate element after the first the occurrence
    while(index + 1 < arr.size() && arr[index + 1] == arr[index]){
       index++;   
   }

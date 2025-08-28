@@ -9,20 +9,21 @@ using namespace std;
 void recursiveSubsetSum(vector<int>&nums, int k, vector<int>& subset, int index, int& sum, vector<vector<int>>& res){
    if(index == nums.size()){
           return;
-      }
-      // pick
-      subset.push_back(nums[index]);
-      sum+=nums[index];
-      // If sum matches k, add the subset to the result
-      if (sum == k) {
-          res.push_back(subset);
-      }
-      recursiveSubsetSum(nums, k, subset, index+1, sum, res);
+    }
+    
+    // pick
+    subset.push_back(nums[index]);
+    sum+=nums[index];
+    // If sum matches k, add the subset to the result
+    if (sum == k) {
+        res.push_back(subset);
+    }
+    recursiveSubsetSum(nums, k, subset, index+1, sum, res);
 
-      // not-pick
-      subset.pop_back();
-      sum-=nums[index];
-      recursiveSubsetSum(nums, k, subset, index+1, sum, res);
+    // not-pick
+    subset.pop_back();
+    sum-=nums[index];
+    recursiveSubsetSum(nums, k, subset, index+1, sum, res);
   }
 
 int subsetSum(vector<int>& nums, int k) {

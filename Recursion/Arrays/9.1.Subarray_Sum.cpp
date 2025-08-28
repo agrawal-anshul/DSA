@@ -1,7 +1,8 @@
-// !Different from 6.3_Subarray_sum_equals_k.cpp
+// !Different from subset sum (refer 6.3)
 
-// !Different from subarray sum 
+// !Different from 6.3_Subarray_sum_equals_k.cpp
 // *NOTE*: subarray-sum-equals-k link: https://leetcode.com/problems/subarray-sum-equals-k/
+
 
 
 #include <iostream>
